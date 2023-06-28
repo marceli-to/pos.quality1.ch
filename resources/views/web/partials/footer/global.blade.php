@@ -4,8 +4,8 @@
   </div>
 </footer>
 <script src="{{ mix('assets/js/app.js') }}" type="text/javascript"></script>
-<script src="{{ mix('assets/js/orders.js') }}" type="text/javascript"></script>
-<script src="{{ mix('assets/js/posts.js') }}" type="text/javascript"></script>
+<script src="{{ mix('assets/js/orders.js') }}" defer type="text/javascript"></script>
+<script src="{{ mix('assets/js/posts.js') }}" defer type="text/javascript"></script>
 </body>
 <!-- made with ❤ by marceli.to -->
 </html>

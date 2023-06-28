@@ -1,9 +1,7 @@
 <?php
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\Api\VoteController;
-use App\Http\Controllers\Api\VoterController;
-use App\Http\Controllers\Api\CommentController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -25,19 +23,17 @@ Route::middleware('auth:sanctum', 'verified')->group(function() {
 });
 
 // Page routes
-Route::get('/de/{post:uuid?}', [PostController::class, 'index'])->name('de.page.listing');
-Route::get('/fr/{post:uuid?}', [PostController::class, 'index'])->name('fr.page.listing');
-Route::get('/it/{post:uuid?}', [PostController::class, 'index'])->name('it.page.listing');
-Route::get('/{post:uuid?}', [PostController::class, 'index'])->name('page.listing');
+Route::get('/', [PageController::class, 'index'])->name('page.listing');
+Route::get('/de/{post:uuid?}', [PageController::class, 'index'])->name('de.page.listing');
+Route::get('/fr/{post:uuid?}', [PageController::class, 'index'])->name('fr.page.listing');
+Route::get('/it/{post:uuid?}', [PageController::class, 'index'])->name('it.page.listing');
 
 // XHR routes
-Route::get('/api/posts/get/{hash}/{offset?}', [PostController::class, 'get']);
-Route::get('/api/post/find/{hash}/{uuid}', [PostController::class, 'find']);
+Route::get('/api/posts/get/{offset?}', [PostController::class, 'get']);
+Route::get('/api/post/find/{uuid}', [PostController::class, 'find']);
 Route::post('/api/post/save', [PostController::class, 'store']);
 Route::post('/api/post/image', [PostController::class, 'upload']);
-Route::get('/api/voter/check/{hash}', [VoteController::class, 'check']);
-Route::post('/api/vote', [VoteController::class, 'store']);
-Route::put('/api/vote', [VoteController::class, 'remove']);
+Route::post('/api/order/save', [OrderController::class, 'store']);
 
 Route::get('/img/download', [PostController::class, 'download']);
 

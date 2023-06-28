@@ -169,11 +169,41 @@ section.landing-participate {
       padding-right: $space-12x;
     }
   }
+}
 
+section.landing-participate {
+  margin-bottom: $space-4x;
+
+  @include bp-sm() {
+    margin-bottom: $space-6x;
+  }
+
+  @include bp-md() {
+    margin-bottom: $space-8x;
+  }
 }
 
 section.landing-order {
+
   .order-form {
+    margin: $space-4x 0;
+
+    @include bp-sm() {
+      margin: $space-8x 0;
+    }
+
+    h3 {
+      @include font-bold();
+      @include font-size($fs-md);
+      line-height: 1.2;
+      margin-bottom: $space-8x;
+      text-align: left;
+
+      &:not(:first-of-type) {
+        margin-top: $space-12x;
+      }
+    }
+
     > div {
       margin-left: auto;
       margin-right: auto;

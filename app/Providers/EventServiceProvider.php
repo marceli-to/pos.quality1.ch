@@ -6,6 +6,8 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 use Illuminate\Support\Facades\Event;
 use App\Events\PostPublish;
 use App\Listeners\PostPublishNotification;
+use App\Events\OrderComplete;
+use App\Listeners\OrderCompleteNotification;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -22,6 +24,10 @@ class EventServiceProvider extends ServiceProvider
         PostPublish::class => [
             PostPublishNotification::class,
         ],
+
+        OrderComplete::class => [
+          OrderCompleteNotification::class,
+      ],
     ];
 
     /**

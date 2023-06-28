@@ -75,12 +75,15 @@ export default {
       if (this.errors.length > 0) {
         message += '<ul>';
         let _that = this;
+        let _error = null;
         this.errors.forEach(function(error){
+          if (_error == error) return;
+          _error = error;
           message += '<li>'+_that.l18n(error)+'</li>';
         });
         message += '</ul>';
       }
-      this.$notify({ type: "error", text: message, duration: -1});
+      this.$notify({ type: "error", text: message, duration: 2000});
       this.$store.commit('isLoading', false); 
     },
 

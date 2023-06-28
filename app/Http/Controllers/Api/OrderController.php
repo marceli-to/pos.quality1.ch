@@ -46,22 +46,4 @@ class OrderController extends Controller
     return response()->json($order);
   }
 
-
-  /**
-   * Store an order
-   * 
-   * @param  OrderStoreRequest $request
-   * @return \Illuminate\Http\Response
-   */
-
-  public function store(OrderStoreRequest $request)
-  { 
-    $order = Order::create([
-      'uuid'  => \Str::uuid(),
-      'email' => $request->input('email'),
-      'name' => $request->input('name'),
-      'company' => $request->input('company'),
-    ]);
-    return response()->json($order->uuid);
-  }
 }

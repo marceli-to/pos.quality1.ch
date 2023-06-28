@@ -25,7 +25,7 @@
     <div class="landing-posts" v-if="!hasForm && isFetched">
       <post :post="p" v-for="(p, idx) in posts" :key="idx"></post>
     </div>
-    <div class="landing-posts-btn" v-if="!hasForm && isFetched">
+    <div class="landing-posts-btn" v-if="!hasForm && isFetched && posts.length >= 12">
       <a href="javascript:;" class="btn-primary" @click.prevent="getMorePosts()">{{l18n('btn_more')}}</a>
     </div>
 
@@ -61,7 +61,6 @@
   </div>
 </template>
 <script>
-import FingerprintJS from '@fingerprintjs/fingerprintjs';
 import Post from '@posts/components/Post.vue';
 import PostForm from "@posts/components/Form.vue";
 import IconCross from "@shared/components/icons/Cross.vue";
@@ -107,12 +106,6 @@ export default {
         default: null,
       },
 
-      // Visitor hash
-      hash: null,
-
-      // Storage key
-      key: '20yQ1',
-
       // States
       hasForm: false,
       hasShare: false,
@@ -131,7 +124,6 @@ export default {
 
   mounted() {
     this.getPosts();
-    //this.getNextPosts();
     
     if (this.$props.uuid) {
       this.getPost();
@@ -156,57 +148,21 @@ export default {
       this.hasForm = this.hasForm ? false : true;
     },
 
-    async getPost() {
-      // Check for hash in local storage
-      let hash = localStorage.getItem(this.key);
+    getPost() {
 
-      // Do we have an existing store?
-      if (!hash) {
-
-        // Load FingerprintJS
-        const fp = await FingerprintJS.load();
-      
-        // Get a visitor identifier
-        const result = await fp.get();
-        this.hash = result.visitorId;
-        localStorage.setItem(this.key, this.hash);
-      }
-      else {
-        this.hash = hash;
-      }
-      
-      let uri = `/api/post/find/${this.hash}/${this.$props.uuid}`;
+      let uri = `/api/post/find/${this.$props.uuid}`;
       this.axios.get(uri).then(response => {
         this.post = response.data.post;
         this.showSingle = true;
       })
       .catch(error => {
-        console.log(error.response);
         this.showSingle = false;
       });
     },
 
-    async getPosts() {
+    getPosts() {
 
-      // Check for hash in local storage
-      let hash = localStorage.getItem(this.key);
-
-      // Do we have an existing store?
-      if (!hash) {
-
-        // Load FingerprintJS
-        const fp = await FingerprintJS.load();
-      
-        // Get a visitor identifier
-        const result = await fp.get();
-        this.hash = result.visitorId;
-        localStorage.setItem(this.key, this.hash);
-      }
-      else {
-        this.hash = hash;
-      }
-      
-      let uri = `/api/posts/get/${this.hash}/${this.offset}`;
+      let uri = `/api/posts/get/${this.offset}`;
       this.axios.get(uri).then(response => {
         this.posts = response.data.posts;
         this.isFetched = true;
@@ -216,23 +172,6 @@ export default {
         this.isFetched = false;
       });
     },
-
-    // getNextPosts() {
-
-    //   window.onscroll = () => {
-    //     let isBottom = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
-    //     if (isBottom && this.offset > 0 && !this.hasForm) {
-    //       let uri = `/api/posts/get/${this.hash}/${this.offset}`;
-    //       this.axios.get(uri).then(response => {
-    //         this.posts = [...this.posts, ...response.data.posts];
-    //         this.offset = this.offset + this.step;
-    //       })
-    //       .catch(error => {
-    //         console.log(error.response);
-    //       });
-    //     }
-    //   }
-    // },
 
     getMorePosts() {
       let uri = `/api/posts/get/${this.hash}/${this.offset}`;

@@ -4,9 +4,9 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use App\Models\Post;
+use App\Models\Order;
 
-class PostNotification extends Mailable
+class OrderNotification extends Mailable
 {
   use Queueable, SerializesModels;
 
@@ -15,9 +15,9 @@ class PostNotification extends Mailable
    *
    * @return void
    */
-  public function __construct(Post $post)
+  public function __construct(Order $order)
   {
-    $this->post = $post;
+    $this->order = $order;
   }
 
   /**
@@ -28,9 +28,9 @@ class PostNotification extends Mailable
   public function build()
   {
     $mail = $this->from(['address' => env('QUALITY1_MAIL_REPLY_TO')])
-                 ->subject('POS – Quality1')
-                 ->with(['post' => json_decode($this->post)])
-                 ->markdown('emails.post.notification');
+                 ->subject('Bestellung POS – Quality1')
+                 ->with(['order' => json_decode($this->order)])
+                 ->markdown('emails.order.notification');
     return $mail;
   }
 }

@@ -36,9 +36,4 @@ class Post extends Base
 		return $query->where('publish', '=', 0)->orderBy('created_at', 'DESC');
   }
 
-	public function votes()
-	{
-		return $this->hasMany('App\Models\Vote', 'post_id', 'id');
-	}
-
 }

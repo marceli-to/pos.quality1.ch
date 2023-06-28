@@ -17,8 +17,13 @@ class CreateOrdersTable extends Migration
           $table->id();
           $table->string('company', 255);
           $table->string('name', 255);
-          $table->string('email')->unique();
-          $table->tinyInteger('publish')->default(0);
+          $table->string('street', 255);
+          $table->string('zip', 25);
+          $table->string('city', 255);
+          $table->string('email');
+          $table->integer('plate_front')->nullable();
+          $table->integer('plate_back')->nullable();
+          $table->integer('flag')->nullable();
           $table->timestamps();
           $table->softDeletes();
         });

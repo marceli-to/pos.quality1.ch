@@ -190,18 +190,27 @@ img {
     width: 100%;
 }
 
+.table.table--order table {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 .table th {
     border-bottom: 1px solid #edeff2;
     margin: 0;
     padding-bottom: 8px;
 }
 
+/* .table tr {
+  border-top: 1px solid #000000;
+} */
+
 .table td {
-    color: #74787e;
-    font-size: 15px;
+    color: #000000;
+    font-size: 16px;
     line-height: 18px;
     margin: 0;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .content-cell {

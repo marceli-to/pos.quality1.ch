@@ -8,11 +8,11 @@ section {
   margin-bottom: $space-6x;
 
   @include bp-sm() {
-    margin-bottom: $space-8x;
+    margin-bottom: $space-12x;
   }
 
   @include bp-md() {
-    margin-bottom: $space-10x;
+    margin-bottom: $space-24x;
   }
 
   > div {

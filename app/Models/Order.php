@@ -9,30 +9,14 @@ class Order extends Base
 	use SoftDeletes;
 
 	protected $fillable = [
-		'uuid',
 		'company',
 		'name',
+    'street',
+    'zip',
+    'city',
 		'email',
-		'publish'
+    'plate_front',
+    'plate_back',
+    'flag',
 	];
-
-  /**
-   * Scope for published posts
-   */
-
-	public function scopePublished($query)
-	{
-		return $query->where('publish', '=', 1)->orderBy('created_at', 'DESC');
-	}
-
-  /**
-   * Scope for non published posts
-   */
-
-	public function scopeNonPublished($query)
-	{
-		return $query->where('publish', '=', 0)->orderBy('created_at', 'DESC');
-  }
-
-
 }
