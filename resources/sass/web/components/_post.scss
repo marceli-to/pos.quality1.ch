@@ -1,0 +1,24 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: component/post
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+.post-upload {
+  margin-top: $space-12x;
+}
+
+.post-form {
+  background-color: $color-grey;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: $space-3x;
+  margin-top: $space-12x;
+  padding: $space-4x;
+
+  img {
+    @extend %is-responsive;
+  }
+
+}

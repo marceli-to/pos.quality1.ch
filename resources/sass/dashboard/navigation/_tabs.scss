@@ -1,0 +1,55 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/navigation/tabs
+ * -----------------------------------------------------------------------------
+ */
+
+nav.tabs {
+  @include responsive-prop('margin-bottom', $space-md);
+
+  ul {
+    align-items: stretch;
+    display: flex;
+    justify-content: flex-start;        
+  }
+
+  li {
+    flex: 1; 
+    padding-right: 20px;
+    text-align: center;
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  a {
+    border-bottom: 3px solid $color-light;
+    color: $color-medium-grey;
+    display: block;
+    @include letter-spacing();
+    @include font-regular();
+    @include font-size($fs-xs);
+    @include responsive-prop('padding-bottom', $space-xs);
+    @include responsive-prop('padding-top', $space-xs);
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .1s ease-out;
+    width: 100%;
+
+    &:hover,
+    &.is-active {
+      border-bottom: 3px solid $color-orange;
+      color: $color-orange;
+    }
+
+    &.is-active {
+      @include font-bold();
+    }
+
+    &.has-error {
+      color: $color-danger;
+      border-bottom: 2px solid $color-danger;
+    }
+  }
+}

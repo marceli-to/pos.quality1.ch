@@ -1,0 +1,148 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: modules/grid
+ * -----------------------------------------------------------------------------
+ *
+ */
+ 
+.grid-layout-selector {
+  border-bottom: 2px solid $color-light-grey;
+  border-top: 2px solid $color-light-grey;
+  @include responsive-prop('margin-bottom', $space-sm);
+  position: relative;
+
+  ul {
+    background-color: $color-white;
+    display: none;
+    margin: 0;
+    padding: 0;
+
+    &.is-visible {
+      display: block;
+      display: grid;
+      margin-bottom: 10px;
+      grid-template-columns: repeat(6, 100px);
+      grid-gap: 20px;
+
+      @include bp-lg() {
+        grid-template-columns: repeat(8, 100px);
+      }
+    }
+
+    li {
+      display: block;
+      margin-top: 10px;
+    }
+
+    a {
+      display: block;
+      width: 90px;
+
+      @include bp-lg() {
+        width: 100px;
+      }
+
+      img {
+        display: block;
+        height: auto;
+        opacity: 1;
+        transition: opacity .12s ease-out;
+        width: 100%;
+      }
+
+      &:hover img {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.grid-layout-row {
+  @include responsive-prop('margin-bottom', $space-sm);
+
+  &.is-list {
+    border-bottom: 2px solid $color-light-grey;
+    margin-bottom: 0 !important;
+    padding-bottom: 20px;
+    padding-top: 20px !important;
+    transition: background-color .12s ease-out;
+
+    &:first-child {
+      border-top: 2px solid $color-light-grey;
+    }
+
+    &:hover {
+      cursor: move;
+    }
+  }
+}
+
+.grid-image-selector {
+  @include responsive-prop('margin-top', $space-md);
+
+  .select-wrapper {
+    &:after {
+      background-color: $color-medium-grey;
+    }
+  }
+
+  select {
+    border: 2px solid $color-medium-grey;
+  }
+}
+
+.grid-image-selector__item {
+
+  &.is-multi {
+    @include responsive-prop('margin-bottom', $space-sm);
+    @include responsive-prop('padding-top', $space-xs);
+  }
+
+  .grid-image-selector__media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 25px;
+
+    @include bp-md() {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include bp-lg() {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    figure {
+      display: block;
+      line-height: 1 !important;
+      position: relative;
+
+      a {
+        display: block;
+      }
+
+      img {
+        background-color: $color-white;
+        border: 2px solid $color-light-grey;
+        padding: 5px;
+        display: block;
+        width: auto;
+        opacity: 1;
+        transition: background-color .1s ease-out;
+      }
+
+      &:hover {
+        img {
+          background-color: $color-white;
+          transition: background-color .1s ease-out;
+        }
+      }
+
+      span {
+        display: block;
+        @include font-size($fs-xs);
+        padding-top: 5px;
+      }
+    }
+  }
+}

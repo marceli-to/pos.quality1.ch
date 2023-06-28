@@ -1,0 +1,24 @@
+%ratio-16x10,
+%ratio-16x9 {
+  height: 0;
+  overflow: hidden;
+  padding-top: 62.5%;
+  position: relative;
+  width: 100%;
+
+  > div {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+%ratio-16x9 {
+  padding-top: 56.25%;
+}
+
+%ratio-16x10 {
+  padding-top: 62.5%;
+}

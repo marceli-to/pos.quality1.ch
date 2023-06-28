@@ -1,0 +1,48 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/header
+ * -----------------------------------------------------------------------------
+ */
+
+header.site-header {
+  margin-bottom: $space-8x;
+  position: relative;
+  
+  @include bp-sm() {
+    margin-bottom: $space-12x;
+  }
+
+  @include bp-md() {
+    margin-bottom: $space-16x;
+  }
+
+  > div {
+    @extend %content-block;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    figure {
+      align-items: center;
+      background-color: $color-white;
+      display: flex;
+      justify-content: center;
+      max-width: 125px;
+      padding: $space-2x;
+
+      @include bp-sm() {
+        max-width: 185px;
+        padding: $space-3x;
+      }
+
+      // @include bp-md() {
+      //   max-width: 225px;
+      // }
+    }
+
+    img {
+      @extend %is-responsive;
+      height: 100%;
+    }
+  }
+}

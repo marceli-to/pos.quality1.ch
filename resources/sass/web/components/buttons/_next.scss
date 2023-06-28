@@ -1,0 +1,20 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/next
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-next {
+  display: flex;
+  justify-content: center;
+
+  img {
+    display: block;
+    height: auto;
+    width: 56px;
+ 
+    @include bp-md() {
+      width: 86px;
+    }
+  }
+}

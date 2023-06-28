@@ -1,0 +1,50 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/header
+ * -----------------------------------------------------------------------------
+ */
+
+ header.page-header {
+  background-color: transparent;
+  color: $color-white;
+  position: relative;
+  width: 100%;
+
+  @include bp-lg() {
+    border-bottom: none;
+  }
+
+  > div {
+    @extend %page-block;
+    align-items: center;
+    display: flex;
+    line-height: 1;
+    justify-content: space-between;
+    @include responsive-prop('height', $header-heights);
+    @include responsive-prop('padding-bottom', $space-sm);
+    @include responsive-prop('padding-top', $space-sm);
+  }
+
+  a.menu-open {
+    color: $color-orange;
+
+    @include bp-lg() {
+      display: none;
+    }
+  }
+
+}
+
+header.content-header {
+  display: flex;
+  justify-content: space-between;
+  @include responsive-prop('margin-bottom', $space-sm);
+
+  &.is-narrow {
+    @include responsive-prop('margin-bottom', $space-xs);
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+}

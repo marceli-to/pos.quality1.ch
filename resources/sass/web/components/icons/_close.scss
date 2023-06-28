@@ -1,0 +1,23 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/icons/close
+ * -----------------------------------------------------------------------------
+ */
+
+.icon-close {
+  display: block;
+  height: 36px;
+  right: $space-3x;
+  position: fixed;
+  top: $space-3x;
+  width: 36px;
+
+  @include bp-sm() {
+    height: 48px;
+    width: 48px;
+  }
+  
+  svg {
+    @extend %is-responsive;
+  }
+}

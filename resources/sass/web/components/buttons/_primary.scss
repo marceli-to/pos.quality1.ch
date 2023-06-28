@@ -1,0 +1,28 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/primary
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-primary,
+input.btn-primary {
+  background-color: $color-orange;
+  border-radius: 500px;
+  border: none;
+  color: $color-white;
+  display: block;
+  @include font-bold();
+  @include font-size($fs-md);
+  padding: $space-3x $space-8x;
+  text-align: center;
+  transition: background-color .1s ease-in;
+
+  &:hover {
+    background-color: $color-black;
+  }
+
+  &.is-inline {
+    display: inline-block;
+    width: auto;
+  }
+}

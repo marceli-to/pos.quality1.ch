@@ -1,0 +1,36 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/forms
+ * -----------------------------------------------------------------------------
+ */
+
+// Auth - login
+form.auth {
+  h1 {
+    @include font-size($fs-lg);
+  }
+}
+
+// Auth - recover password
+form.auth--recover {
+  max-width: 480px;
+  .form-group {
+    label {
+      @include bp-lg() {
+        flex: 0 0 125px;
+      }
+    }
+  }
+}
+
+// Auth - reset password form
+form.auth--reset {
+  max-width: 480px;
+  .form-group {
+    label {
+      @include bp-lg() {
+        flex: 0 0 215px;
+      }
+    }
+  }
+}

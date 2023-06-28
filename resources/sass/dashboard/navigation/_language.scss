@@ -1,0 +1,46 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/navigation/language
+ * -----------------------------------------------------------------------------
+ */
+
+nav.language {
+  display: flex;
+  justify-content: flex-end;
+
+  label {
+    margin-bottom: 3px !important;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    margin-right: 10px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: $color-medium-grey;
+    display: block;
+    @include font-regular();
+    @include font-size($fs-sm);
+    @include letter-spacing();
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .1s ease-out;
+    width: 100%;
+
+    &:hover,
+    &.is-active {
+      color: $color-dark;
+    }
+
+    &.has-error {
+      color: $color-danger;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/section
+ * -----------------------------------------------------------------------------
+ */
+
+section {
+  margin-bottom: $space-6x;
+
+  @include bp-sm() {
+    margin-bottom: $space-8x;
+  }
+
+  @include bp-md() {
+    margin-bottom: $space-10x;
+  }
+
+  > div {
+    @extend %content-block;
+
+    p {
+      //text-align: center;
+      margin-bottom: $space-4x;
+  
+      @include bp-sm() {
+        margin-bottom: $space-6x;
+      }
+  
+      @include bp-md() {
+        margin-bottom: $space-8x;
+      }
+    }
+  }
+}
+
+section.auth,
+section.error {
+
+  > div {
+    display: flex;
+    justify-content: center;
+    padding-top: $space-10x;
+
+    h1 {
+      text-align: left;
+    }
+
+    article {
+      max-width: 640px;
+      width: 100%;
+
+    }
+  }
+}
+
+section.error {
+
+  > div {
+    @extend %content-block;
+    flex-direction: column;
+  }
+  
+  h1 {
+    margin-bottom: $space-12x;
+  }
+  
+  p {
+    max-width: 900px;
+  }
+
+}

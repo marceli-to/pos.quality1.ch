@@ -1,0 +1,25 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/base
+ * -----------------------------------------------------------------------------
+ */
+
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: rgb(101,133,177);
+	background: radial-gradient(circle, rgba(101,133,177,1) 15%, rgba(15,58,93,1) 100%);
+	color: $color-white;
+	@include font-smoothing();
+	@include font-regular();
+	@include font-size($fs-sm);
+	min-height: 100vh;
+	position: relative;
+}
+
+// Scrollbars
+@include scrollbar(6px, $color-orange);

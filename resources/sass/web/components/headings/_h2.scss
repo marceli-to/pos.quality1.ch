@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: component/headings/h2
+ * -----------------------------------------------------------------------------
+ */
+
+h2 {
+  @include font-bold();
+  @include font-size($fs-xl);
+  margin-bottom: $space-4x;
+
+  @include bp-md() {
+    margin-bottom: $space-8x;
+  }
+}

@@ -1,0 +1,130 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/navigation/page
+ * -----------------------------------------------------------------------------
+ */
+
+ nav.page {
+  background-color: $color-blue;
+  height: 100%;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 240px;
+  z-index: 301;
+  transform: translateX(100%);
+  transition: transform .2s  ease-out;
+
+  &.is-visible {
+    transform: translateX(0);
+    transition: transform .2s  ease-out;
+
+    * {
+      opacity: 1;
+    }
+  }
+
+  * {
+    opacity: 1;
+    -webkit-transition: opacity .1s .3s ease-out;
+    transition: opacity .1s .3s ease-out;
+  }
+
+  @include bp-lg() {
+    left: 0;
+    right: auto;
+    transform: translateX(0);
+    * {
+      opacity: 1;
+    }
+  }
+
+
+  header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include responsive-prop('height', $header-heights);
+
+    span {
+      color: $color-white;
+      @include font-size($fs-xs);
+
+      .feather-icon {
+        margin-top: 5px;
+      }
+    }
+
+    a.menu-close {
+      color: $color-white;
+      @include bp-lg() {
+        display: none;
+      }
+    }
+  }
+
+  ul {
+    width: 100%;
+
+    @include bp-lg() {
+      border-top: none;
+    }
+  }
+
+  li {
+    display: block;
+  
+    a {
+      align-items: center;
+      color: $color-white;
+      display: flex;
+      @include font-bold();
+      @include font-size($fs-sm);
+      @include responsive-prop('padding-bottom', $space-sm);
+      padding-left: 20px;
+      @include responsive-prop('padding-top', $space-sm);
+      width: 100%;
+      transition: background-color .1s ease-out;
+
+      &.is-active,
+      &:hover {
+        background-color: lighten(#0f3a5d, 10);
+      }
+
+      @include bp-lg() {
+        border-bottom: none;
+      }
+    }
+
+    span {
+      color: $color-white;
+      display: block;
+      @include font-bold();
+      @include font-size($fs-sm);
+      margin-bottom: 10px;
+      @include responsive-prop('padding-bottom', $space-sm);
+      padding-left: 20px;
+      @include responsive-prop('padding-top', $space-sm);
+    }
+
+    .is-parent,
+    span {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  ul ul {
+    padding-left: 0 !important;
+
+    li {
+      a {
+        @include font-size($fs-sm);
+        @include font-regular();
+        @include responsive-prop('padding-bottom', $space-xs);
+        @include responsive-prop('padding-top', $space-xs);
+      }
+    }
+  }
+}

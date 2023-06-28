@@ -1,0 +1,84 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: admin/vendor/notifications
+ * -----------------------------------------------------------------------------
+ *
+ * Source: https://www.npmjs.com/package/vue-notification
+ */
+
+.vue-notification-group {
+  right: auto;
+  left: 0;
+  width: 100% !important;
+  
+  @include bp-sm() {
+    max-width: 400px !important;
+  }
+
+  span,
+  .notification-content {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  .notification-content {
+    padding: $space-4x;
+  }
+
+}
+
+.notification {
+  cursor: pointer;
+  color: $color-white;
+  border-radius: 0;
+  @include font-bold();
+  @include font-size($fs-xs);
+  margin: 0;
+  width: 100%;
+
+  ul, li {
+    @include font-regular();
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    margin-left: $space-5x;
+    margin-top: $space-2x;
+  }
+
+  li {
+    display: list-item;
+  }
+
+  &.warn {
+    background-color: $color-warning;
+  }
+
+  &.error {
+    @include background-default();
+    background-image: url($url-icons + 'cross.svg');
+    background-color: $color-danger;
+    background-position: top 12px right 12px;
+    background-size: 16px auto;
+
+    @include bp-sm() {
+      background-position: top 12px right 12px;
+      padding-right: 56px;
+    }
+
+    @include bp-md() {
+      background-position: top 12px right 28px;
+    }
+  }
+
+  &.success {
+    background-color: $color-success;
+  }
+
+  @include bp-md() {
+    margin-top: $space-4x;
+    margin-left: $space-4x;
+  }
+}

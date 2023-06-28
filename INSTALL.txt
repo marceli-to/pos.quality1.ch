@@ -1,0 +1,21 @@
+Create User
+-----------
+
+1) 
+DB::table('users')->insert(['firstname' => 'Marcel', 'name' => 'Stadelmann', 'email' => 'm@marceli.to', 'password' => Hash::make('7aq31rr'), 'role' => 'admin'])
+DB::table('users')->insert(['firstname' => 'Michaela', 'name' => 'Dominguez', 'email' => 'Michaela.Dominguez@quality1.ch', 'password' => Hash::make('kMvpW31rq'), 'role' => 'admin'])
+
+Create PW with tinker
+
+1. php artisan tinker
+2. \Str::random(16)
+3. \Hash::make()
+
+
+php composer.phar install --optimize-autoloader
+
+// Shell
+ssh quality4@quality1.ch
+
+// Cron
+cd /home/quality4/www/20years.quality1.ch && php artisan schedule:run >> /dev/null 2>&1

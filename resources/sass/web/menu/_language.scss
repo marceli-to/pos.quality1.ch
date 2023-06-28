@@ -1,0 +1,63 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/menu/language
+ * -----------------------------------------------------------------------------
+ */
+
+nav.language {
+  line-height: 1 !important;
+  right: $space-1x;
+  position: absolute;
+  top: $space-2x;
+  z-index: 100;
+
+  @include bp-md() {
+    right: 0;
+    top: $space-4x;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    display: block;
+    position: relative;
+
+    &:after {
+      content: '|';
+      display: block;
+      font-size: 12px;
+      line-height: 1;
+      position: absolute;
+      overflow: hidden;
+      right: -2px;
+      top: 2px;
+
+      @include bp-md() {
+        top: 8px;
+      }
+    }
+
+    &:last-of-type:after {
+      display: none;
+    }
+  }
+
+  a {
+    color: $color-white;
+    @include font-size($fs-tiny);
+    line-height: 1 !important;
+    padding: 0 $space-2x;
+    transition: color .1s ease-in;
+
+    @include bp-md() {
+      padding: 0 $space-3x;
+    }
+    
+    &.is-active,
+    &:hover {
+      color: $color-orange;
+    }
+  }
+}

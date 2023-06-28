@@ -1,0 +1,29 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/footer
+ * -----------------------------------------------------------------------------
+ */
+
+footer.site-footer {
+
+  > div {
+    @extend %content-block-wide;
+    @include font-size($fs-xxs);
+    line-height: 1.4;
+    margin-top: $space-20x;
+    padding-bottom: $space-8x;
+    text-align: center;
+    
+    @include bp-sm() {
+      padding-bottom: $space-12x;
+    }
+
+    a {
+      color: $color-white;
+      transition: color .1s ease-in;
+      &:hover {
+        color: $color-orange;
+      }
+    }
+  }
+}

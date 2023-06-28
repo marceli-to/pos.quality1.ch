@@ -1,0 +1,40 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/placeholder
+ * -----------------------------------------------------------------------------
+ */
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: $color-black;
+  @include font-size($fs-sm);
+  @include font-bold();
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $color-black;
+  @include font-size($fs-sm);
+  @include font-bold();
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: $color-black;
+  @include font-size($fs-sm);
+  @include font-bold();
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $color-black;
+  @include font-size($fs-sm);
+  @include font-bold();}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $color-black;
+  @include font-size($fs-sm);
+  @include font-bold();
+}
+
+::placeholder { /* Most modern browsers support this now. */
+  color: $color-black;
+  @include font-size($fs-sm);
+  @include font-bold();
+}

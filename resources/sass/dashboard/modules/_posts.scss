@@ -1,0 +1,48 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: modules/posts
+ * -----------------------------------------------------------------------------
+ */
+
+.posts {
+
+  @include bp-sm() {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+
+  @include bp-md() {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .post {
+    background-color: $color-white;
+    border: 3px solid $color-light;
+    margin-bottom: 30px;
+    padding: 12px 12px 36px 12px;
+    position: relative;
+    @include bp-sm() {
+      margin-bottom: 0;
+    }
+
+    img {
+      @extend %is-responsive;
+    }
+
+    figcaption {
+      padding: 8px 0 0 0;
+    }
+
+    nav {
+      bottom: 8px;
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 8px;
+      a {
+        margin: 0 4px;
+      }
+    }
+  }
+}

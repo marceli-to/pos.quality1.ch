@@ -1,0 +1,58 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: component/pagination/global
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+.pagination {
+  @include responsive-prop('margin-top', $space-md);
+  text-align: left;
+
+  background-color: $color-white;
+  border-top: 3px solid $color-light;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+
+  @include bp-sm() {
+    padding: 15px 0;
+  }
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    display: block;
+    padding: 0 8px;
+  }
+
+  a {
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    color: $color-dark;
+    display: flex;
+    justify-content: center;
+    @include font-size($fs-sm);
+    @include font-regular();
+    line-height: 1 !important;
+    text-align: center;
+    height: 32px;
+    width: 32px;
+
+    &:hover,
+    &.is-active {
+      border-bottom: 2px solid $color-dark;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: helpers/flexbox
+ * -----------------------------------------------------------------------------
+ *
+ * Alignment using flexbox
+ *
+ */
+
+ %flex,
+ .flex {
+  display: flex;
+ }
+ 
+ %justify-start,
+ .justify-start {
+   justify-content: flex-start;
+ }
+ 
+ %justify-end,
+ .justify-end {
+   justify-content: flex-end;
+ }
+ 
+ %justify-center,
+ .justify-center {
+   justify-content: center;
+ }
+ 
+ %justify-between,
+ .justify-between {
+   justify-content: space-between;
+ }
+ 
+ %justify-around,
+ .justify-around	{
+   justify-content: space-around;
+ }
+ 
+ %justify-evenly,
+ .justify-evenly	{
+   justify-content: space-evenly;
+ }
+ 
+ %align-start,
+ .align-start {
+   align-items: flex-start;
+ }
+ 
+ %align-end,
+ .align-end {
+   align-items: flex-end;
+ }
+ 
+ %align-center,
+ .align-center {
+   align-items: center;
+ }
