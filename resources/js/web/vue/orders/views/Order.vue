@@ -139,11 +139,13 @@
 
       hideForm() {
         this.hasForm = false;
+        const el = document.querySelector('.landing-order');
+        window.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
       },
   
       cancel() {
         this.reset();
-        this.toggleForm();
+        this.hideForm();
       },
   
       reset() {
