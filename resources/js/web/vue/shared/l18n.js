@@ -44,7 +44,7 @@ export default {
         'image_max_files_exceeded': 'Nur 1 Bild erlaubt',
         'accept_tos': 'Bitte Teilnahmebedingungen akzeptieren',
         'tos': 'Ich bin damit einverstanden, dass meine Informationen und mein Bild öffentlich zugänglich und geteilt werden darf.',
-        'notification_success': 'Vielen Dank für Ihren Beitrag. Wir werden diesen prüfen und freischalten.',
+        'notification_success': 'Vielen Dank für Ihre Teilnahme. Ihr Bild wird in Kürze aufgeschaltet.',
         'characters': 'Zeichen',
         'characters_limit': 'max. 100 Zeichen',
         'like': 'Like',

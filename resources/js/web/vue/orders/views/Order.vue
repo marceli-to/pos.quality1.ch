@@ -181,7 +181,7 @@
           this.orderComplete = true;
           const el = document.querySelector('.landing-order');
           window.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
-          this.$notify({ type: "success", text: 'Vielen Dank für Ihre Bestellung. Sie erhalten das bestellte Material in Kürze.', duration: 2000});
+          this.$notify({ type: "success", text: 'Vielen Dank für Ihre Bestellung. Sie erhalten das bestellte Material in Kürze.', duration: 6000});
         })
         .catch(error => {
           this.$store.commit('isLoading', false); 
