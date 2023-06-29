@@ -72,10 +72,10 @@ class PostController extends Controller
     $post->publish = $post->publish == 0 ? 1 : 0;
     $post->save();
 
-    if ($post->publish == 1)
-    {
-      event(new PostPublish($post));
-    }
+    // if ($post->publish == 1)
+    // {
+    //   event(new PostPublish($post));
+    // }
 
     return response()->json($post->publish);
   }

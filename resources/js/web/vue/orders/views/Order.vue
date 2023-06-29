@@ -13,7 +13,6 @@
       <div class="order-form js-landing-form">
         <div>
           <form>
-            <h3>Ja ich möchte neues POS-Material und bestelle gerne kostenlos:</h3>
             <div class="form-group">
               <label><strong>{{ l18n('plate_front')}}</strong></label>
               <div class="select-wrapper">

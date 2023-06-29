@@ -16,6 +16,10 @@
     max-width: 480px;
   }
 
+  @include bp-sm() {
+    max-width: 50%;
+  }
+
 	&:after {
     @include background-default();
     background-image: url($url-icons + 'chevron-down.svg');
