@@ -13,7 +13,7 @@
         </a>
       </div>
     </header>
-    <img :src="`/image/polaroid/${post.image}`" width="480" height="480" :alt="post.name">
+    <img :src="`/image/polaroid/${post.image}`" width="480" height="480" :alt="post.name" loading="lazy">
     <figcaption>
       <div v-if="post.company">{{ post.company }}</div>
       <div v-if="post.name">{{ post.name }}</div>
