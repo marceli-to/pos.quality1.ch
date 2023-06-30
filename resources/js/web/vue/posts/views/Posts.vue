@@ -25,7 +25,7 @@
     <div class="landing-posts" v-if="!hasForm && isFetched">
       <post :post="p" v-for="(p, idx) in posts" :key="idx"></post>
     </div>
-    <div class="landing-posts-btn" v-if="!hasForm && isFetched && posts.length >= 12">
+    <div class="landing-posts-btn" v-if="!hasForm && isFetched &&hasMore">
       <a href="javascript:;" class="btn-primary" @click.prevent="getMorePosts()">{{l18n('btn_more')}}</a>
     </div>
 
@@ -111,6 +111,7 @@ export default {
       hasShare: false,
       isFetched: false,
       showSingle: false,
+      hasMore: false,
 
       // Limit & Offset
       step: 12,
@@ -167,6 +168,7 @@ export default {
         this.posts = response.data.posts;
         this.isFetched = true;
         this.offset = this.offset + this.step;
+        this.hasMore = response.data.hasMore;
       })
       .catch(error => {
         this.isFetched = false;
@@ -174,10 +176,11 @@ export default {
     },
 
     getMorePosts() {
-      let uri = `/api/posts/get/${this.hash}/${this.offset}`;
+      let uri = `/api/posts/get/${this.offset}`;
       this.axios.get(uri).then(response => {
         this.posts = [...this.posts, ...response.data.posts];
         this.offset = this.offset + this.step;
+        this.hasMore = response.data.hasMore;
       })
       .catch(error => {
         console.log(error.response);

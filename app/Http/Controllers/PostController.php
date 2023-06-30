@@ -44,7 +44,10 @@ class PostController extends BaseController
       }
     }
 
-    return response()->json(['posts' => collect($posts)]);
+    // check if there are more posts
+    $hasMore = Post::published()->skip($offset + $limit)->take($limit)->get()->count() > 0 ? true : false;
+
+    return response()->json(['posts' => collect($posts), 'hasMore' => $hasMore]);
   }
 
   /**
