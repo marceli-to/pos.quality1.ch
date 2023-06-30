@@ -58,7 +58,7 @@
                 </select>
               </div>
             </div>
-            <h3>Versand an:</h3>
+            <h3>{{ l18n('deliver_to')}}</h3>
             <div class="form-group">
               <input type="text" name="company" v-model="order.company" :placeholder="l18n('placeholder_company')">
             </div>
@@ -181,7 +181,7 @@
           this.orderComplete = true;
           const el = document.querySelector('.landing-order');
           window.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
-          this.$notify({ type: "success", text: 'Vielen Dank für Ihre Bestellung. Sie erhalten das bestellte Material in Kürze.', duration: 6000});
+          this.$notify({ type: "success", text: this.l18n('notification_order_success'), duration: 6000});
         })
         .catch(error => {
           this.$store.commit('isLoading', false); 

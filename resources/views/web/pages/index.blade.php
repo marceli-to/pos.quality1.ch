@@ -19,7 +19,7 @@
       <img src="/assets/img/keyvisual.png" height="1920" width="1920" alt="{{__('Quality1 mit neuem Auftritt')}}">
     </figure>
     <p>{{__('Seit 21 Jahren sind Fahrzeuggarantien unsere Leidenschaft, und wir sind dankbar, dass wir viele von Ihnen als langjährige Partner an unserer Seite haben.') }}</p>
-    <p>{!!__('Um Ihnen weiterhin das Beste bieten zu können, entwickeln wir unsere Angebote ständig weiter. Wir haben unseren Quality1-Auftritt vereinheitlicht und einen frischen Wind in unsere Firmenpräsentation gebracht. Verschiedene historische Marken wurden zu einer gemeinsamen Marke, <strong>Quality1</strong>, gebündelt und unser POS-Material haben wir entsprechend aktualisiert, weiterentwickelt und aufgefrischt.') !!}}</p>
+    <p>{!!__('Um Ihnen weiterhin das Beste bieten zu können, entwickeln wir unsere Angebote ständig weiter. Wir haben unseren Quality1-Auftritt vereinheitlicht und einen frischen Wind in unsere Firmenpräsentation gebracht. Verschiedene historische Marken wurden zu einer gemeinsamen Marke, <strong>Quality1</strong>, gebündelt und unser POS-Material haben wir entsprechend aktualisiert, weiterentwickelt und aufgefrischt.') !!}</p>
     <div class="landing-intro__list">
       <p><strong>{{ __('Im Detail bedeutet das:') }}</strong></p>
       <ul>

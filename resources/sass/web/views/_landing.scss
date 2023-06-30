@@ -94,15 +94,15 @@ section.landing-intro {
     }
 
     @include bp-md() {
-      height: 200px;
+      height: 205px;
       top: -60px;
       right: -60px;
-      width: 200px;
+      width: 205px;
     }
 
     span {
       display: block;
-      padding: $space-4x $space-4x $space-7x $space-4x;
+      padding: $space-4x $space-6x $space-7x $space-6x;
 
       em {
         display: block;
@@ -146,6 +146,44 @@ section.landing-intro {
     }
   }
 } 
+
+// html lang="fr"
+
+[lang="fr"] section.landing-intro .landing-intro__badge {
+  @include bp-sm() {
+    height: 205px;
+    width: 205px;
+
+    span {
+      padding-left: $space-8x;
+      padding-right: $space-8x;
+    }
+  }
+
+  @include bp-md() {
+    height: 230px;
+    width: 230px;
+
+    span {
+      padding: $space-4x $space-6x $space-7x $space-6x;
+    }
+  }
+}
+
+[lang="it"] section.landing-intro .landing-intro__badge {
+  @include bp-sm() {
+    height: 190px;
+    width: 190px;
+  }
+
+  @include bp-md() {
+    height: 215px;
+    width: 215px;
+  }
+}
+
+
+
 
 section.landing-order,
 section.landing-participate {
