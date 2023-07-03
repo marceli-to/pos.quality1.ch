@@ -38,7 +38,7 @@
         </header>
         <div>
           <div class="share__icons">
-            <a :href="'whatsapp://send?text=' + l18n('share_title') + ' – ' + l18n('share_body') + '%0D%0A%0D%0A' + this.shareUrl" class="icon-whatsapp" @click="hideShare()">
+            <a :href="'whatsapp://send?text=' + l18n('share_title') + '%0D%0A%0D%0A' + this.shareUrl" class="icon-whatsapp" @click="hideShare()">
               <icon-whatsapp />
               <label>Whatsapp</label>
             </a>
@@ -46,7 +46,7 @@
               <icon-facebook />
               <label>Facebook</label>
             </a>
-            <a :href="'mailto:?subject=' + l18n('share_title') + '&body=' + l18n('share_body') + '%0D%0A%0D%0A' + this.shareUrl" class="icon-email" target="_blank" @click="hideShare()">
+            <a :href="'mailto:?subject=' + l18n('share_title') + '&body=' + '%0D%0A%0D%0A' + this.shareUrl" class="icon-email" target="_blank" @click="hideShare()">
               <icon-email />
               <label>E-Mail</label>
             </a>
