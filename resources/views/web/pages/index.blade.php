@@ -13,7 +13,7 @@
     <figure class="landing-intro__visual">
       <a href="javascript:;" class="landing-intro__badge js-btn-badge">
         <span>
-          <strong>{!!__('Jetzt umstellen, Foto hochladen & Überraschung für Ihr Team gewinnen.')!!}</strong>
+          <strong>{!!__('Jetzt mitmachen, Foto hochladen & Überraschung für Ihr Team gewinnen.')!!}</strong>
         </span>
       </a>
       <img src="/assets/img/keyvisual.png" height="1920" width="1920" alt="{{__('Quality1 mit neuem Auftritt')}}">
@@ -44,7 +44,7 @@
   <div>
     <h2>{!! __('Jetzt mitmachen') !!}</h2>
     <p>{!! __('Wir freuen uns darauf, den vereinheitlichten Auftritt von Quality1 gemeinsam mit Ihnen umzusetzen und unseren Kundinnen und Kunden zu präsentieren. Zeigen Sie uns bis zum <strong>27. Oktober 2023</strong> mit Fotos von Ihrem Betrieb, wie Sie die neu gestalteten POS-Materialien, insbesondere die Nummernschilder und Fahnen, einsetzen.') !!}</p>
-    <p>{!! __('Am 20. September 2023 werden wir aus den eingesendeten Bildern <strong>21&nbsp;Gewinner auslosen</strong>. Als Dankeschön für die aktive Unterstützung erhalten die Gewinner eine Überraschung.') !!}</p>
+    <p>{!! __('Am 31. Oktober 2023 werden wir aus den eingesendeten Bildern <strong>21&nbsp;Gewinner auslosen</strong>. Als Dankeschön für die aktive Unterstützung erhalten die Gewinner eine Überraschung.') !!}</p>
     <p>{!! __('Wir freuen uns auf Ihre Teilnahme und stehen Ihnen bei Fragen gerne zur Verfügung!') !!}</p>
   </div>
 </section>
