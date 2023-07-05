@@ -43,7 +43,7 @@
 <section class="landing-participate">
   <div>
     <h2>{!! __('Jetzt mitmachen') !!}</h2>
-    <p>{!! __('Wir freuen uns darauf, den vereinheitlichten Auftritt von Quality1 gemeinsam mit Ihnen umzusetzen und unseren Kundinnen und Kunden zu präsentieren. Zeigen Sie uns bis zum <strong>27. Oktober 2023</strong> mit Fotos von Ihrem Betrieb, wie Sie die neu gestalteten POS-Materialien, insbesondere die Nummernschilder und Fahnen, einsetzen.') !!}</p>
+    <p>{!! __('Wir freuen uns darauf, den vereinheitlichten Auftritt von Quality1 gemeinsam mit Ihnen umzusetzen und unseren Kundinnen und Kunden zu präsentieren. Zeigen Sie uns bis zum <strong>27. Oktober 2023</strong> mit einem Foto von Ihrem Betrieb, wie Sie die neu gestalteten POS-Materialien, insbesondere die Nummernschilder und Fahnen, einsetzen.') !!}</p>
     <p>{!! __('Am 31. Oktober 2023 werden wir aus den eingesendeten Bildern <strong>21&nbsp;Gewinner auslosen</strong>. Als Dankeschön für die aktive Unterstützung erhalten die Gewinner eine Überraschung.') !!}</p>
     <p>{!! __('Wir freuen uns auf Ihre Teilnahme und stehen Ihnen bei Fragen gerne zur Verfügung!') !!}</p>
   </div>
