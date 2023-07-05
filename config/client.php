@@ -19,7 +19,7 @@ return [
   */
 
   'email' => [
-    'from' => env('QUALITY1_MAIL_REPLY_TO', 'no-reply@quality1.ch'),
+    'from' => env('QUALITY1_MAIL_REPLY_TO', 'sales@quality1.ch'),
     'recipient' => env('QUALITY1_MAIL_RECIPIENT', 'marcel@jamon.digital'),
     'bcc' => env('QUALITY1_MAIL_BCC', 'marcel@jamon.digital'),
   ],
